@@ -43,7 +43,7 @@ async function addCv(event) {
             window.location.replace("/index.html");
 
         } else {
-            document.getElementById("error").innerHTML = "Det går inte att spara cv";
+            document.getElementById("error").innerHTML = "Det går inte att spara cv, fyll i alla fält!";
         }
 
     } catch {
