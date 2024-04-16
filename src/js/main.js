@@ -9,7 +9,7 @@ async function loadCv() {
     try {
         const response = await fetch("https://dt207g-moment-2.onrender.com/api/cv");
         const data = await response.json();
-        console.log(data);
+        //console.log(data);
 
         displayCv(data);
 
@@ -20,7 +20,7 @@ async function loadCv() {
 
 function displayCv(cvData) {
     cvData.forEach(cv => {
-        console.log(cv);
+        //console.log(cv);
         document.getElementById("cv-wrap").innerHTML +=
             `<article class="cv-article">
                 <h2 class="cv-wrap-title">${cv.job_title}</h2>
@@ -50,7 +50,7 @@ async function deleteCv(cvId) {
             method: "DELETE",
         });
 
-        console.log(response);
+        //console.log(response);
 
         if (!response.error) {
             loadCv();

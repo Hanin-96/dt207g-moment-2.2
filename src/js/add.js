@@ -36,7 +36,7 @@ async function addCv(event) {
             })
         });
         const data = await response.json();
-        console.log(data);
+        //console.log(data);
 
         if (response.ok) {
             //Redirect till startsida
