@@ -7,3 +7,7 @@ Webbplatsen innehåller fiktiva cv.
 <br>
 <br>
 Webbtjänsten är kopplad till databasen PostgreSQL och tjänsten Render för att publicera och få ett url för APIet.
+<br>
+<br>
+Länk till webbplats:
+https://admirable-marshmallow-4e8cde.netlify.app/
