@@ -37,9 +37,8 @@ function displayCv(cvData) {
 
             cvWrap.appendChild(btnDelete);
 
-            btnDelete.addEventListener("click", () => {
-                deleteCv(cv.cv_id);
-            })
+            btnDelete.addEventListener("click", deleteCv(cv.cv_id));
+
     });
 }
 
