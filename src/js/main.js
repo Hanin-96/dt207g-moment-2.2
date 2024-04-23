@@ -20,24 +20,22 @@ async function loadCv() {
 
 function displayCv(cvData) {
     cvData.forEach(cv => {
-        //console.log(cv);
-        document.getElementById("cv-wrap").innerHTML +=
-            `<article class="cv-article">
-                <h2 class="cv-wrap-title">${cv.job_title}</h2>
-                <p class="cv-company">${cv.company_name}</p>
-                <p class="cv-location">${cv.location}</p>
-                <p class="cv-description">${cv.description}</p>
-            </article>`
-
-            let cvWrap = document.getElementById("cv-wrap");
-            let btnDelete = document.createElement("button");
-            let btnText = document.createTextNode("Ta bort");
-
-            btnDelete.appendChild(btnText);
-
-            cvWrap.appendChild(btnDelete);
-
-            btnDelete.addEventListener("click", deleteCv(cv.cv_id));
+    
+        let btnDelete = document.createElement("button");
+        btnDelete.textContent = "Ta bort";
+        btnDelete.addEventListener("click", () => deleteCv(cv.cv_id));
+    
+        let cvWrap = document.getElementById("cv-wrap");
+        let cvArticle = document.createElement("article");
+        cvArticle.className = "cv-article";
+        cvArticle.innerHTML = `
+            <h2 class="cv-wrap-title">${cv.job_title}</h2>
+            <p class="cv-company">${cv.company_name}</p>
+            <p class="cv-location">${cv.location}</p>
+            <p class="cv-description">${cv.description}</p>
+        `;
+        cvArticle.appendChild(btnDelete);
+        cvWrap.appendChild(cvArticle);
 
     });
 }
